@@ -1,0 +1,1312 @@
+:root {
+  --primary: #000000;
+  --backg: #ffffff;
+  --nav: rgb(77, 78, 78);
+  --belakang: #ff00ee;
+  --infobox: #890707;
+  --backgambar: rgba(235, 231, 228, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgba(235, 231, 228, 255);
+  color: var(--backg);
+  /* min-height: 5000px; */
+}
+
+body .navbar .navbar-logo {
+  font-family: "Six Caps", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 6%;
+  background-color: var(--backg);
+  /* border-bottom: 1px solid #646464; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .container {
+  height: 48px;
+}
+
+.navbar .navbar-logo {
+  font-size: 3rem;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  width: 50%;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: var(--nav);
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 0.7rem;
+  height: 1.8rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--belakang);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: var(--nav);
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--belakang);
+}
+
+#git-branch {
+  display: none;
+}
+
+/* Navbar Search Form */
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 5%;
+  width: 40rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+  border-radius: 15%;
+}
+
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
+
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 1rem;
+  border-radius: 50px;
+  background-color: rgba(155, 153, 153, 0.5);
+}
+
+.navbar .search-form label {
+  cursor: pointer;
+  font-size: 3ram;
+  margin-right: 0.2rem;
+  color: var(--primary);
+}
+
+/* Daftar Track
+.truck {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  height: 100vh;
+  width: 35rem;
+  padding: 0 1.5rem;
+  background-color: #fff;
+  color: var(--backg);
+  transition: 0.3s;
+}
+
+.truck.active {
+  right: 0;
+}
+
+.truck .truck-item {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #666;
+  position: relative;
+}
+
+.truck img {
+  height: 6rem;
+  border-radius: 50%;
+}
+
+.truck h3 {
+  font-size: 1.6rem;
+  padding-bottom: 0.5rem;
+}
+
+.truck .item-price {
+  font-size: 1.3rem;
+}
+
+.truck .remove-item {
+  position: absolute;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.truck .remove-item:hover {
+  color: var(--primary);
+} */
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/header 2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(235, 231, 228, 255) 8%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 4em;
+  color: var(--backg);
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: var(--primary);
+}
+
+.hero .content p {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 200;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  mix-blend-mode: difference;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: var(--backg);
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content .cta:hover {
+  /* background-color: 0 1px 3px rgba(0, 0, 0, 0.5); */
+  border: 0.3px solid var(--belakang);
+}
+
+.hero .content a:hover {
+  color: #ff0000;
+}
+
+/* Peta Jalur Section */
+.map .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(235, 231, 228, 255);
+  box-shadow: 0 1px 3px rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+/* .map h1 {
+  text-align: center;
+  color: var(#fff);
+  margin-top: 0;
+} */
+
+.map .transportation-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.map label {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.map select {
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--backg);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.map p {
+  padding: 15px;
+}
+
+.map select:hover,
+.map select:focus {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.map .map-image {
+  max-width: 100%;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.map .map-image.show {
+  opacity: 1;
+}
+
+/* About Section */
+.about,
+.menu,
+.contact,
+.map {
+  padding: 8rem 7% 1.4rem;
+}
+
+.about h2,
+.menu h2,
+.contact h2,
+.map h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--nav);
+  /* -webkit-text-stroke: 1px var(--backg);
+  color: var(--nav); */
+}
+
+.about h2 span,
+.menu h2 span,
+.map h2 span,
+.contact h2 span {
+  color: var(--primary);
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+  padding: 1.8rem;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.about .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  margin-left: -0.8rem;
+  color: var(--primary);
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  margin-top: 0.2rem;
+  font-size: 1.25rem;
+  font-weight: 200;
+  line-height: 1.6;
+  text-align: left;
+  color: var(--primary);
+}
+
+/* Menu Section */
+.menu h2,
+.contact h2 {
+  margin-bottom: 1rem;
+}
+.menu p,
+.contact p,
+.map p {
+  text-align: center;
+  max-width: 50rem;
+  margin: auto;
+  font-size: 1.3rem;
+  font-weight: 200;
+  line-height: 1.6;
+  color: var(--primary);
+}
+
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.menu .row .menu-card {
+  text-align: center;
+  padding-bottom: 4 rem;
+}
+
+.menu .row .menu-card img {
+  border-radius: 50%;
+  width: 80%;
+  border: 2px solid var(--backg);
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.2);
+}
+
+.menu .row .menu-card .menu-card-title {
+  margin: 1rem auto 0.5rem;
+  color: var(--primary);
+}
+
+.menu .menu-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.menu .menu-icons a {
+  width: 4rem;
+  height: 3rem;
+  color: var(--primary);
+  margin: 0.6rem;
+  border: 1px solid var(--backg);
+  border-radius: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu .menu-icons a:hover {
+  background-color: var(--belakang);
+  border: 1px solid var(--backg);
+}
+
+.menu .menu-stars {
+  font-size: 1.7rem;
+  padding: 0.8rem;
+  color: var(--primary);
+}
+
+.menu .menu-stars .star-full {
+  fill: var(--primary);
+}
+
+/* Kombo Box */
+.menu .kombo {
+  text-align: center;
+  max-width: 70rem;
+  margin: auto;
+}
+
+.menu .kombo .com1 {
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 600;
+  /* border: 1px solid #000000;
+  border-radius: 0.3rem; */
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  margin-top: 2rem;
+  margin-right: 1rem;
+  color: #000000;
+  background-color: var(--backg);
+}
+
+.menu .kombo .com2 {
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 600;
+  /* border: 1px solid #fff;
+  border-radius: 0.3rem; */
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  margin-top: 2rem;
+  margin-right: 1rem;
+  color: #000000;
+  background-color: var(--backg);
+}
+
+.menu .kombo .com3 {
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 600;
+  /* border: 1px solid #fff;
+  border-radius: 0.3rem; */
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  margin-top: 2rem;
+  margin-right: 1rem;
+  color: #000000;
+  background-color: var(--backg);
+}
+
+.menu .kombo .com4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  border-radius: 0.3rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.menu .kombo .com1:hover {
+  background-color: 0 1px 3px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--belakang);
+}
+
+.menu .kombo .com2:hover {
+  background-color: 0 1px 3px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--belakang);
+}
+
+.menu .kombo .com3:hover {
+  background-color: 0 1px 3px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--belakang);
+}
+/* Contact Section */
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #222;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--backg);
+  border: 1px solid #eee;
+  padding-left: 2rem;
+}
+
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+  color: #fff;
+}
+
+.contact .row form .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: var(--primary);
+  cursor: pointer;
+}
+
+/* Footer Section */
+footer {
+  background-color: var(--backg);
+  text-align: center;
+  padding: 0.1rem 0 1rem;
+  margin-top: 2rem;
+}
+
+footer .socials {
+  padding: 0.5rem 0;
+}
+
+footer .socials a {
+  color: var(--nav);
+  margin: 0.5rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--belakang);
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: var(--nav);
+  padding: 0.7rem 1rem;
+}
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: var(--primary);
+  font-weight: 900;
+}
+
+footer .credit p {
+  color: var(--primary);
+  font-weight: 900;
+}
+
+/* Modal Box */
+.modal p span,
+.modalkama p span,
+.modalbayu p span,
+.modalsibayak p span,
+.modalrio p span,
+/* .modalrio p span, */
+.modaltakasima p span,
+.modalsigantang p span {
+  color: var(--infobox);
+}
+
+/* Item Detail  KT*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-container {
+  position: relative;
+  background-color: var(--backgambar);
+  color: var(--primary);
+  margin: 11% auto;
+  padding: 1.2rem;
+  border: 1px solid var(--belakang);
+  width: 80%;
+  animation: animateModal 0.5s;
+}
+
+/* Item Detail Kama */
+.modalkama {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-container-kama {
+  position: relative;
+  background-color: var(--backgambar);
+  color: var(--primary);
+  margin: 7% auto;
+  padding: 1.2rem;
+  border: 1px solid var(--belakang);
+  width: 80%;
+  animation: animateModal 0.5s;
+}
+
+/* Item Detail Bayu */
+.modalbayu {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-container-bayu {
+  position: relative;
+  background-color: var(--backgambar);
+  color: var(--primary);
+  margin: 12% auto;
+  padding: 1.2rem;
+  border: 1px solid var(--belakang);
+  width: 80%;
+  animation: animateModal 0.5s;
+}
+/* Item Detail Sibayak */
+.modalsibayak {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-container-sibayak {
+  position: relative;
+  background-color: var(--backgambar);
+  color: var(--primary);
+  margin: 13% auto;
+  padding: 1.2rem;
+  border: 1px solid var(--belakang);
+  width: 80%;
+  animation: animateModal 0.5s;
+}
+/* Item Detail Rio */
+.modalrio {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-container-rio {
+  position: relative;
+  background-color: var(--backgambar);
+  color: var(--primary);
+  margin: 15% auto;
+  padding: 1.2rem;
+  border: 1px solid var(--belakang);
+  width: 80%;
+  animation: animateModal 0.5s;
+}
+/* Item Detail Takasima */
+.modaltakasima {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-container-takasima {
+  position: relative;
+  background-color: var(--backgambar);
+  color: var(--primary);
+  margin: 12% auto;
+  padding: 1.2rem;
+  border: 1px solid var(--belakang);
+  width: 80%;
+  animation: animateModal 0.5s;
+}
+/* Item Detail Sigantang*/
+.modalsigantang {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-container-sigantang {
+  position: relative;
+  background-color: var(--backgambar);
+  color: var(--primary);
+  margin: 11% auto;
+  padding: 1.2rem;
+  border: 1px solid var(--belakang);
+  width: 80%;
+  animation: animateModal 0.5s;
+}
+
+/* Modal Animation KT */
+@keyframes animateModal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modal-container .close-icon {
+  position: absolute;
+  right: 1rem;
+}
+
+.modal-content {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.modal-content img {
+  height: 16.5rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.modal-content p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-top: 1.2rem;
+}
+
+.modal-content .menu-stars {
+  height: 1rem;
+}
+
+.modal-content .menu-stars .star-full {
+  fill: #000000;
+}
+
+.modal-content a {
+  display: flex;
+  gap: 1rem;
+  width: 12rem;
+  background-color: var(--primary);
+  color: #fff;
+  margin-top: 1rem;
+  padding: 1rem 1.6rem;
+}
+
+/* Modal Animation Kama */
+@keyframes animateModal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modal-container-kama .close-icon {
+  position: absolute;
+  right: 1rem;
+}
+
+.modal-content-kama {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.modal-content-kama img {
+  height: 16.5rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.modal-content-kama p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-top: 1.2rem;
+}
+
+.modal-content-kama .menu-stars {
+  height: 5rem;
+}
+
+.modal-content-kama .menu-stars .star-full {
+  fill: #000000;
+}
+
+.modal-content-kama a {
+  display: flex;
+  gap: 1rem;
+  width: 12rem;
+  background-color: var(--primary);
+  color: #fff;
+  margin-top: 1rem;
+  padding: 1rem 1.6rem;
+}
+
+/* Modal Animation Bayu */
+@keyframes animateModal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modal-container-bayu .close-icon {
+  position: absolute;
+  right: 1rem;
+}
+
+.modal-content-bayu {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.modal-content-bayu img {
+  height: 16.5rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.modal-content-bayu p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-top: 1.2rem;
+}
+
+.modal-content-bayu .menu-stars {
+  height: 5rem;
+}
+
+.modal-content-bayu .menu-stars .star-full {
+  fill: #000000;
+}
+
+.modal-content-bayu a {
+  display: flex;
+  gap: 1rem;
+  width: 12rem;
+  background-color: var(--primary);
+  color: #fff;
+  margin-top: 1rem;
+  padding: 1rem 1.6rem;
+}
+/* Modal Animation Sibayak */
+@keyframes animateModal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modal-container-sibayak .close-icon {
+  position: absolute;
+  right: 1rem;
+}
+
+.modal-content-sibayak {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.modal-content-sibayak img {
+  height: 16.5rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.modal-content-sibayak p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-top: 1.2rem;
+}
+
+.modal-content-sibayak .menu-stars {
+  height: 5rem;
+}
+
+.modal-content-sibayak .menu-stars .star-full {
+  fill: #000000;
+}
+
+.modal-content-sibayak a {
+  display: flex;
+  gap: 1rem;
+  width: 12rem;
+  background-color: var(--primary);
+  color: #fff;
+  margin-top: 1rem;
+  padding: 1rem 1.6rem;
+}
+/* Modal Animation Rio */
+@keyframes animateModal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modal-container-rio .close-icon {
+  position: absolute;
+  right: 1rem;
+}
+
+.modal-content-rio {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.modal-content-rio img {
+  height: 16.5rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.modal-content-rio p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-top: 1.2rem;
+}
+
+.modal-content-rio .menu-stars {
+  height: 5rem;
+}
+
+.modal-content-rio .menu-stars .star-full {
+  fill: #000000;
+}
+
+.modal-content-rio a {
+  display: flex;
+  gap: 1rem;
+  width: 12rem;
+  background-color: var(--primary);
+  color: #fff;
+  margin-top: 1rem;
+  padding: 1rem 1.6rem;
+}
+/* MOdal Animation Takasima */
+@keyframes animateModal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modal-container-takasima .close-icon {
+  position: absolute;
+  right: 1rem;
+}
+
+.modal-content-takasima {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.modal-content-takasima img {
+  height: 16.5rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.modal-content-takasima p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-top: 1.2rem;
+}
+
+.modal-content-takasima .menu-stars {
+  height: 5rem;
+}
+
+.modal-content-takasima .menu-stars .star-full {
+  fill: #000000;
+}
+
+.modal-content-takasima a {
+  display: flex;
+  gap: 1rem;
+  width: 12rem;
+  background-color: var(--primary);
+  color: #fff;
+  margin-top: 1rem;
+  padding: 1rem 1.6rem;
+}
+/* Modal Animation Sigantang */
+@keyframes animateModal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modal-container-sigantang .close-icon {
+  position: absolute;
+  right: 1rem;
+}
+
+.modal-content-sigantang {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.modal-content-sigantang img {
+  height: 16.5rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.modal-content-sigantang p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-top: 1.2rem;
+}
+
+.modal-content-sigantang .menu-stars {
+  height: 5rem;
+}
+
+.modal-content-sigantang .menu-stars .star-full {
+  fill: #000000;
+}
+
+.modal-content-sigantang a {
+  display: flex;
+  gap: 1rem;
+  width: 12rem;
+  background-color: var(--primary);
+  color: #fff;
+  margin-top: 1rem;
+  padding: 1rem 1.6rem;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+  .menu p {
+    font-size: 1.5rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #git-branch {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--nav);
+    width: 20rem;
+    height: 100vh;
+    transition: 0.4s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--backg);
+    display: block;
+    margin: 1rem;
+    padding: 3rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform: scaleX(0);
+    transition: 0.3s linear;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.8);
+  }
+
+  .navbar .search-form {
+    width: 90%;
+    right: 2rem;
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .content p {
+    font-size: 1.6rem;
+  }
+
+  .menu p {
+    font-size: 1.4rem;
+  }
+
+  /* .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .contact .row .map {
+    height: 30rem;
+  }
+
+  .contact .row form {
+    padding-top: 0;
+  } */
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+  .modal-container {
+    margin: 23% auto;
+  }
+
+  .modal-container-kama {
+    margin: 15% auto;
+  }
+
+  .modal-container-bayu {
+    margin: 30% auto;
+  }
+
+  .modal-container-sibayak {
+    margin: 35% auto;
+  }
+
+  .modal-container-rio {
+    margin: 35% auto;
+  }
+
+  .modal-container-takasima {
+    margin: 30% auto;
+  }
+
+  .modal-container-sigantang {
+    margin: 25% auto;
+  }
+
+  .modal-content {
+    flex-wrap: wrap;
+  }
+
+  .modal-content-kama {
+    flex-wrap: wrap;
+  }
+
+  .modal-content-bayu {
+    flex-wrap: wrap;
+  }
+
+  .modal-content-sibayak {
+    flex-wrap: wrap;
+  }
+
+  .modal-content-rio {
+    flex-wrap: wrap;
+  }
+
+  .modal-content-takasima {
+    flex-wrap: wrap;
+  }
+
+  .modal-content-sigantang {
+    flex-wrap: wrap;
+  }
+}

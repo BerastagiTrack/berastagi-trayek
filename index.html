@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peta Jalur Angkutan Umum</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600;700&display=swap"
+           rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link 
+        href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap" 
+        rel="stylesheet"
+        />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io2/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io2/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io2/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io2/site.webmanifest">
+
+    <!-- my style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar start -->
+    <nav class="navbar">
+
+      <div class="container">
+        <a href="#"><img src="img/logo/50x50.png" alt="logo navbar"></a>
+      </div>
+     
+      <a href="#" class="navbar-logo"
+        >Berastagi <span>Trayek</span>.</a>
+       
+      <div class="navbar-nav">
+        <a href="#map">Peta Jalur</a>
+        <a href="#about">Tentang Berastagi</a>
+        <a href="#menu">Daftar Transportasi</a>
+        <!-- <a href="#contact">Kontak</a> -->
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search-button"><i data-feather="search"></i></a>
+        <!-- <a href="#" id="truck-button"><i data-feather="truck"></i></a> -->
+        <a href="#" id="git-branch"><i data-feather="git-branch"></i></a>
+      </div>
+
+      <!-- Search Form Start -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="cari disini..."
+        onkeypress="handleKeyPress(event)"
+         />
+        <label for="search-box" onclick="search()"><i data-feather="search"></i></label>
+      </div>
+     
+      <!-- Search Form End -->
+
+      
+      
+      <!-- Daftar Track start -->
+      <!-- <div class="truck">
+        <div class="truck-item">
+          <img src="img/jt/KT.jpg" alt="Karya Transport">
+          <div class="item-detail">
+            <h3>Karya Transport</h3>
+            <div class="item-price">IDR 3K Turun Dekat</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+        <div class="truck-item">
+          <img src="img/jt/kama.jpg" alt="kama">
+          <div class="item-detail">
+            <h3>Kama</h3>
+            <div class="item-price">IDR 3K Turun Dekat</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+        <div class="truck-item">
+          <img src="img/jt/KT.jpg" alt="Karya Transport">
+          <div class="item-detail">
+            <h3>Karya Transport</h3>
+            <div class="item-price">IDR 3K Turun Dekat</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+      </div> -->
+      <!-- Daftar Track end -->
+    </nav>
+    <!-- Navbar end -->
+    
+    <!-- Hero Section Start-->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>Ayo Keliling <span>Berastagi</span></h1>
+        <p>
+          Keliling Berastagi dengan nyaman tanpa harus takut tersesat dengan bantuan pemilihan transportasi yang tepat sesuai dengan tujuan anda.
+        </p>
+        <a href="#menu" class="cta">Pergi Sekarang</a>
+      </main>
+    </section>
+    <!-- Hero Section End-->
+    
+    <!-- Peta Jalur Start -->
+    <section id="map" class="map">
+      <h2><span>Peta Jalur</span> Angkutan</h2>
+      <p>
+        Berikut adalah gambaran peta dari jalur angkutan umum yang ada di Berastagi
+      </p>
+      <div class="container">
+               <div class="transportation-box">
+          <label for="transportation-select">Pilih Nama Angkutan Umum:</label>
+          <select id="transportation-select" onchange="showMap(this.value)">
+            <option value="">Pilih Peta Angkutan</option>
+            <option value="KT">Karya Transport</option>
+            <option value="KAMA">KAMA</option>
+            <option value="BAYU">BAYU</option>
+            <option value="SIBAYAK">Sibayak</option>
+            <option value="RIO">Rio</option>
+            <option value="TAKASIMA">Takasima</option>
+            <option value="SIGANTANG">Sigantang Sira</option>
+          </select>
+          <img
+            id="map-image"
+            class="map-image"
+            src=""
+            alt="Peta Jalur Angkutan"
+          />
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- Peta Jalur End -->
+
+
+    <!-- About Section Start -->
+    <section id="about" class="about">
+      <h2><span>Tentang</span> Berastagi</h2>
+
+      <div class="row">
+        <div class="about-img">
+          <img src="img/bunga212.jpg" alt="Tentang Berastagi" />
+        </div>
+        <div class="content">
+          <h3>Apa yang ada di Berastagi</h3>
+          <p>
+            Berastagi adalah sebuah kecamatan di Kabupaten Karo, provinsi Sumatra Utara, Indonesia. Berastagi merupakan kecamatan terbesar kedua di dataran tinggi karo setelah Kabanjahe. Berastagi merupakan salah satu tujuan wisata yang populer di Sumatra Utara, dan berbatasan dengan Sibolangit
+          </p> 
+          <p>
+            Aktivitas ekonomi di Berastagi terpusat pada produksi sayur,buah-buahan dan pariwisata. Berastagi merupakan salah satu penghasil sayur dan buah buahan terbesar di Sumatra Utara. Bahkan sudah di ekspor ke Singapura dan Malaysia. Etnis yang dominan di daerah ini adalah Suku Karo, dan berkomunikasi dengan Bahasa Karo dialek Gugung.
+          </p>
+          <p>
+            Berastagi merupakan destinasi wisata yang sangat rekomendasi dengan pemandangan alam yang indah dan udara yang segar, ada beberapa objek-objek wisata andalan atau yang lebih sering dikunjungi wisatawan di Berastagi seperti Gundaling, Pasar Buah Berastagi, Danau Lau Kawar,Taman Alam Lumbini, Gunung Sibayak dan banyak lainnya.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Menu Section Start -->
+    <section id="menu" class="menu">
+      <h2><span>Daftar</span> Transportasi</h2>
+      <p>
+        Berikut ini adalah beberapa jenis atau nama transportasi umum yang dapat anda pilih sesuai dengan tujuan anda di Berastagi 
+      </p>
+      
+      <!-- Menu Section Combo Box Start -->
+      <div class="kombo">
+        
+        <select id="combo-box-1" class="com1" onchange="updateComboBox4()">
+          <option value="value">Pilih Angkot</option>
+          <option value="KT">Karya Transport</option>
+          <option value="KAMA">KAMA</option>
+          <option value="BAYU">BAYU</option>
+          <option value="SIBAYAK">Sibayak</option>
+          <option value="RIO">Rio</option>
+          <option value="TAKASIMA">Takasima</option>
+          <option value="SIGANTANG">Sigantang Sira</option>
+        </select>
+      
+            <select id="combo-box-2" class="com2" onchange="updateComboBox1()">
+          <option value="">Start Dari</option>
+          <option value="kabanjahe">Kabanjahe</option>
+          <option value="pajakbawah">Stasiun Pajak Bawah</option>
+          <option value="perjuangan">Tugu Perjuangan</option>
+          <option value="pajakbuah">Pajak Buah</option>
+          <option value="jalankolam">Stasiun Jalan Kolam</option>
+          <option value="smp">SMPN2</option>
+          <option value="sidebuk">Lau Sidebuk-debuk</option>
+          <option value="jaranguda">Jaranguda</option>
+          <option value="gunungsibayak">Pintu Gunung Sibayak</option>
+          <option value="sususapi">Pemerasan Susu Sapi</option>
+          <option value="gundaling">Gundaling</option>
+          <option value="suryaindah">Jalan Surya Indah</option>
+          <option value="lingga">Lingga</option>
+          <option value="ujungaji">Simpang Ujung Aji</option>
+          <option value="ajijulu">Aji Julu</option>
+          <option value="ajijahe">Aji Jahe</option>
+          <option value="bukitkubu">Bukit Kubu</option>
+          <option value="holiday">Mickey Holiday</option>
+          <option value="peceren">Peceren</option>
+          <option value="lumbini">Taman Lumbini</option>
+          <option value="udara">Jalan Udara</option>
+          <option value="kawar">Lau Kawar</option>
+          <option value="gongsol">Gongsol</option>
+          <option value="keling">Kampung Keling</option>
+          <option value="tongkoh">Tongkoh</option>
+          <option value="linggajulu">Lingga Julu</option>
+          <option value="bukit">Bukit</option>
+          <option value="kubu">Kubu</option>
+          <option value="naman">Naman Teran</option>
+          <option value="sukandebi">Sukandebi</option>
+          <option value="simpangempat">Simpang Empat</option>
+          <option value="basam">Basam</option>
+        </select>
+    
+        <select id="combo-box-3" class="com3" onchange="updateComboBox1()">
+          <option value="">Tujuan Anda</option>
+          <option value="akabanjahe">Kabanjahe</option>
+          <option value="apajakbawah">Stasiun Pajak Bawah</option>
+          <option value="aperjuangan">Tugu Perjuangan</option>
+          <option value="apajakbuah">Pajak Buah</option>
+          <option value="ajalankolam">Stasiun Jalan Kolam</option>
+          <option value="asmp">SMPN2</option>
+          <option value="asidebuk">Lau Sidebuk-debuk</option>
+          <option value="ajaranguda">Jaranguda</option>
+          <option value="agunungsibayak">Pintu Gunung Sibayak</option>
+          <option value="asususapi">Pemerasan Susu Sapi</option>
+          <option value="agundaling">Gundaling</option>
+          <option value="asuryaindah">Jalan Surya Indah</option>
+          <option value="alingga">Lingga</option>
+          <option value="aujungaji">Simpang Ujung Aji</option>
+          <option value="aajijulu">Aji Julu</option>
+          <option value="aajijahe">Aji Jahe</option>
+          <option value="abukitkubu">Bukit Kubu</option>
+          <option value="aholiday">Mickey Holiday</option>
+          <option value="apeceren">Peceren</option>
+          <option value="alumbini">Taman Lumbini</option>
+          <option value="audara">Jalan Udara</option>
+          <option value="akawar">Lau Kawar</option>
+          <option value="agongsol">Gongsol</option>
+          <option value="akeling">Kampung Keling</option>
+          <option value="atongkoh">Tongkoh</option>
+          <option value="ajulu">Lingga Julu</option>
+          <option value="abukit">Bukit</option>
+          <option value="akubu">Kubu</option>
+          <option value="anaman">Naman Teran</option>
+          <option value="asukandebi">Sukandebi</option>
+          <option value="asimpangempat">Simpang Empat</option>
+          <option value="abasam">Basam</option>
+        </select>
+    
+        <select id="combo-box-4" class="com4">
+          <option value="">Jumlah Ongkos</option>
+        </select>
+  
+      
+    </div>
+      <!-- Menu Section Combo Box End -->
+
+<!-- Menu Card Start -->
+      <div class="row">
+        <div class="menu-card">
+          <div class="menu-icons">
+            <!-- <a href="#"><i data-feather="truck"></i></a> -->
+            <a href="#" class="item-detail-button"><i data-feather="chevrons-down"></i></a>
+            <!-- <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/pqxdilfs.json"
+    trigger="hover"
+    colors="outline:#131432,primary:#e8308c,secondary:#08a88a,tertiary:#ebe6ef"
+    style="width:100px;height:100px">
+</lord-icon> -->
+          </div>
+          <img src="img/jt/KT.jpg" alt="KT" class="menu-card-img" />
+          <h3 class="menu-card-title">-Karya Transport-</h3>
+          <p class="menu-card-price">IDR 3K Turun Dekat</p>
+          <div class="menu-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star"></i>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-icons">
+            <!-- <a href="#"><i data-feather="truck"></i></a> -->
+            <a href="#" class="item-detail-button-kama"><i data-feather="chevrons-down"></i></a>
+          </div>
+          <img src="img/jt/kama.jpg" alt="kama" class="menu-card-img" />
+          <h3 class="menu-card-title">-Kama-</h3>
+          <p class="menu-card-price">IDR 3K Turun Dekat</p>
+          <div class="menu-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star"></i>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-icons">
+            <!-- <a href="#"><i data-feather="truck"></i></a> -->
+            <a href="#" class="item-detail-button-bayu"><i data-feather="chevrons-down"></i></a>
+          </div>
+          <img src="img/jt/bayu.jpg" alt="KT" class="menu-card-img" />
+          <h3 class="menu-card-title">-Bayu-</h3>
+          <p class="menu-card-price">IDR 3K Turun Dekat</p>
+          <div class="menu-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star"></i>
+            <i data-feather="star"></i>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-icons">
+            <!-- <a href="#"><i data-feather="truck"></i></a> -->
+            <a href="#" class="item-detail-button-sibayak"><i data-feather="chevrons-down"></i></a>
+          </div>
+          <img src="img/jt/sibayak.jpg" alt="sibayak" class="menu-card-img" />
+          <h3 class="menu-card-title">-Sibayak-</h3>
+          <p class="menu-card-price">IDR 3K Turun Dekat</p>
+          <div class="menu-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star"></i>
+            <i data-feather="star"></i>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-icons">
+            <!-- <a href="#"><i data-feather="truck"></i></a> -->
+            <a href="#" class="item-detail-button-rio"><i data-feather="chevrons-down"></i></a>
+          </div>
+          <img src="img/jt/rio.jpg" alt="rio" class="menu-card-img" />
+          <h3 class="menu-card-title">-Rio-</h3>
+          <p class="menu-card-price">IDR 3K Turun Dekat</p>
+          <div class="menu-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star"></i>
+            <i data-feather="star"></i>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-icons">
+            <!-- <a href="#"><i data-feather="truck"></i></a> -->
+            <a href="#" class="item-detail-button-takasima"><i data-feather="chevrons-down"></i></a>
+          </div>
+          <img src="img/jt/takasima.jpg" alt="takasima" class="menu-card-img" />
+          <h3 class="menu-card-title">-Takasima-</h3>
+          <p class="menu-card-price">IDR 3K Turun Dekat</p>
+          <div class="menu-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star"></i>
+            <i data-feather="star"></i>
+          </div>
+        </div>
+        
+        <div class="menu-card">
+          <div class="menu-icons">
+            <!-- <a href="#"><i data-feather="truck"></i></a> -->
+            <a href="#" class="item-detail-button-sigantang"><i data-feather="chevrons-down"></i></a>
+          </div>
+          <img src="img/jt/sigantang.jpg" alt="sigantang" class="menu-card-img" />
+          <h3 class="menu-card-title">-Sigantang Sira-</h3>
+          <p class="menu-card-price">IDR 3K Turun Dekat</p>
+          <div class="menu-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star"></i>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <!-- MEnu Card End -->
+    <!-- Menu Section End -->
+
+    <!-- Contact Section Start -->
+    <!-- <section id="contact" class="contact">
+      <h2><span>Kontak</span> Saya</h2>
+      <p>
+        Silahkan kontak saya jika ada pertanyaan atau saran
+      </p> -->
+
+      <!-- <div class="row">
+        <iframe
+          src="https://goo.gl/maps/kcWv9t6XPPWynfeF7"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe> -->
+
+        <!-- <form action="">
+          <div class="input-group">
+            <i data-feather="user"></i>
+            <input type="text" placeholder="nama" />
+          </div>
+          <div class="input-group">
+            <i data-feather="mail"></i>
+            <input type="text" placeholder="email" />
+          </div>
+          <div class="input-group">
+            <i data-feather="phone"></i>
+            <input type="text" placeholder="no hp" />
+          </div>
+          <button type="submit" class="btn">kirim pesan</button>
+        </form>
+      </div>
+    </section> -->
+    <!-- Contact Section End -->
+
+    <!-- Footer Start-->
+    <footer>
+      <div class="socials">
+        <a href="https://www.instagram.com/duncan_tarigan" target="_blank"><i data-feather="instagram"></i></a>
+        <a href="https://www.facebook.com/duncanduluanpulang" target="_blank"><i data-feather="facebook"></i></a>
+      </div>
+
+      <div class="links">
+        <a href="#map">Peta Jalur</a>
+        <a href="#about">Tentang Berastagi</a>
+        <a href="#menu">Daftar Transportasi</a>
+        <!-- <a href="#contact">Kontak</a> -->
+      </div>
+
+      <div class="credit">
+        <p>Created by <a href="">duncantarigan</a>. | &copy; 2023.</p>
+      </div>
+    </footer>
+    <!-- Footer End-->
+
+    <!-- Modal Box Item Detail start -->
+    <!-- KT -->
+    <div class="modal" id="item-detail-modal">
+      <div class="modal-container">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img src="img/jt/KT.jpg" alt="KT">
+          <div class="product-content">
+            <h3>Karya Transport (Kuning)</h3>
+            <p>Karya Transport sering disingkat KT.</p>
+            <p>
+              <span>KT memiliki rute pertama</span>  dari Kabanjahe->Stasiun Pajak Bawah->Tugu Perjuangan->Pasar Buah->SMPN 2->Stasiun Jalan Kolam
+            </p>
+            <p>
+              <span>Rute kedua</span>  dari Kabanjahe ->Tugu Perjuangan->Bukit Kubu->Mickey Holiday->Peceren->Tongkoh->Taman Lumbini->Basam->Lau Sidebuk-debuk (pemandian air panas)
+            </p>
+            <p>
+              <span>Stasiun Pemberhentian</span> Di Plaza Kabanjahe, Pajak Bawah Berastagi, Tugu Bambu Runcing Kabanjahe, Rumah Kabanjahe, Desa Kaban, Lingga dan Nangbelawan.
+            </p>
+            <p class="menu-card-price">IDR 3K Turun Dekat</p>
+            <div class="menu-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <!-- <a href="#"><i data-feather="truck"></i> <span>add to list</span></a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Kama -->
+    <div class="modalkama" id="item-detail-modal-kama">
+      <div class="modal-container-kama">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content-kama">
+          <img src="img/jt/kama.jpg" alt="kama">
+          <div class="product-content">
+            <h3>Kama (Warna Hijau Biru)</h3>
+            <p>Berikut adalah rute angkot KAMA</p>
+            <p><span>Rute pertama</span>  dari Desa Jaranguda->Pasar Buah->Tugu perjuangan->Stasiun Pajak Bawah Berastagi->Kabanjahe.</p>
+            <p><span>Rute kedua</span>  dari Kabanjahe->Tugu Perjuangan->Pasar Buah->Stasiun Desa Jaranguda->Pintu Gunung Sibayak</p>
+            <p><span>Rute ketiga</span>  dari Kabanjahe->Tugu Perjuangan->Pasar Buah->Stasiun Desa Jaranguda->Pemerasan Susu Sapi</p>
+            <p><span>Rute keempat</span>  dari Kabanjahe->Tugu Perjuangan->Gundaling (Angkot ini biasa ngetem di Tugu Perjuangan)</p>
+            <p><span>Stasiun Pemberhentian</span> Di Jaranguda, Pajak Bawah Berastagi, Pajak Singa.</p>
+
+            <p class="menu-card-price">IDR 3K Turun Dekat</p>
+            <div class="menu-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <!-- <a href="#"><i data-feather="truck"></i> <span>add to list</span></a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bayu -->
+    <div class="modalbayu" id="item-detail-modal-bayu">
+      <div class="modal-container-bayu">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content-bayu">
+          <img src="img/jt/bayu.jpg" alt="bayu">
+          <div class="product-content">
+            <h3>Bayu (Warna Ungu)</h3>
+            <p>Berikut adalah rute angkot Bayu</p>
+            <p><span>Rute Pertama</span>  dari Kabanjahe->Stasiun Pajak Bawah Berastagi->Tugu Perjuangan->Pasar Buah->Jalan Surya Indah</p>
+            <p><span>Rute kedua</span>  dari Jalan Surya Indah->Pasar Buah->Tugu Perjuangan->Stasiun Pajak Bawah Berastagi->Kabanjahe->Desa Lingga->Lingga Julu</p>
+            <p><span>Stasiun Pemberhentian</span> Di Lingga Julu, Lingga, Plaza Kabanjahe, Pajak Bawah Berastagi.</p>
+            <p class="menu-card-price">IDR 3K Turun Dekat</p>
+            <div class="menu-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+            </div>
+            <!-- <a href="#"><i data-feather="truck"></i> <span>add to list</span></a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sibayak -->
+    <div class="modalsibayak" id="item-detail-modal-sibayak">
+      <div class="modal-container-sibayak">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content-sibayak">
+          <img src="img/jt/sibayak.jpg" alt="sibayak">
+          <div class="product-content">
+            <h3>Sibayak (Warna Putih)</h3>
+            <p>Berikut adalah rute angkot Sibayak</p>
+            <p><span>Rute pertama</span>  dari Stasiun Pajak Bawah Berastagi->Simpang Ujung Aji->Desa Aji Julu->Aji Jahe</p>
+            <p><span>Rute kedua</span>  dari Stasiun Pajak Bawah Berastagi->Bukit->Kubu</p>
+            <p><span>Stasiun Pemberhentian</span> Di Pajak Bawah Berastagi</p>
+            <p class="menu-card-price">IDR 3K Turun Dekat</p>
+            <div class="menu-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+            </div>
+            <!-- <a href="#"><i data-feather="truck"></i> <span>add to list</span></a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rio -->
+    <div class="modalrio" id="item-detail-modal-rio">
+      <div class="modal-container-rio">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content-rio">
+          <img src="img/jt/rio.jpg" alt="rio">
+          <div class="product-content">
+            <h3>Rio (Warna Oranye Strip Hijau)</h3>
+            <p>Berikut adalah rute angkot Rio</p>
+            <p>Dari Kabanjahe->Jalan Udara->Desa Lau Kawar->Naman Teran->Sukandebi</p>
+            <p><span>Stasiun Pemberhentian</span> Di Keling, Pajak Bawah Berastagi, Simpang Empat Berastagi, Tugu Bambu Runcing, Pajak Singa.</p>
+            <p class="menu-card-price">IDR 3K Turun Dekat</p>
+            <div class="menu-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+            </div>
+            <!-- <a href="#"><i data-feather="truck"></i> <span>add to list</span></a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Takasima -->
+    <div class="modaltakasima" id="item-detail-modal-takasima">
+      <div class="modal-container-takasima">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content-takasima">
+          <img src="img/jt/takasima.jpg" alt="takasima">
+          <div class="product-content">
+            <h3>Takasima (Warna Hijau Kuning)</h3>
+            <p>Berikut adalah rute angkot Takasima</p>
+            <p><span>Rute pertama</span>  dari Stasiun Pajak Bawah Berastagi->Tugu Perjuangan->Pasar Buah->Gundaling</p>
+            <p><span>Rute kedua</span>  dari Stasiun Pajak Bawah Berastagi->Tugu Perjuangan->Pasar Buah->Desa Gongsol->Kampung Keling->Simpang Empat->Naman Teran->Lau Kawar</p>
+            <p><span>Stasiun Pemberhentian</span> Di Keling, Pajak Bawah Berastagi, Naman Teran.</p>
+            <p class="menu-card-price">IDR 3K Turun Dekat</p>
+            <div class="menu-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+            </div>
+            <!-- <a href="#"><i data-feather="truck"></i> <span>add to list</span></a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sigantang -->
+    <div class="modalsigantang" id="item-detail-modal-sigantang">
+      <div class="modal-container-sigantang">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content-sigantang">
+          <img src="img/jt/sigantang.jpg" alt="sigantang">
+          <div class="product-content">
+            <h3>Sigantang Sira (Warna Oranye Hijau)</h3>
+            <p>Berikut adalah rute angkot Sigantang Sira</p>
+            <p><span>Rute pertama</span>  dari Kabanjahe->Stasiun Pajak Bawah Berastagi->Tugu Perjuangan->Bukit Kubu->Mickey Holiday->Peceren->Tongkoh (Tahura)</p>
+            <p><span>Rute kedua</span>  dari Kabanjahe->Stasiun Pajak Bawah Berastagi->Tugu Perjuangan->Bukit Kubu->Mickey Holiday->Peceren->Taman Lumbini->Basam</p>
+            <p><span>Stasiun Pemberhentian</span> Di Tongkoh, Kacaribu, Kandibata, Pajak Bawah Berastagi, Barung Kersap, Jl Kuta Cane Kabanjahe, Suka Rame dan Talin Kuta.</p>
+            <p class="menu-card-price">IDR 3K Turun Dekat</p>
+            <div class="menu-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <!-- <a href="#"><i data-feather="truck"></i> <span>add to list</span></a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Box Item Detail end -->
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My Javascript -->
+    <script src="js/script.js"></script>
+    <!-- My PHP -->
+    <!-- <php src="php/koneksi.php"></php> -->
+    <!-- <a href="https://lordicon.com/">Icons by Lordicon.com</a> -->
+
+  </body>
+</html>
