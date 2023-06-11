@@ -23,375 +23,19 @@ function search() {
   if (
     query.includes("program1") ||
     query.includes("pilihan1") ||
-    query.includes("opsi1") ||
-    query.includes("daftar transportasi") ||
-    query.includes("angkot") ||
-    query.includes("angkutan") ||
-    query.includes("harga") ||
-    query.includes("ongkos") ||
-    query.includes("harga ongkos") ||
-    query.includes("harga ongkos kt") ||
-    query.includes("harga ongkos kama") ||
-    query.includes("harga ongkos bayu") ||
-    query.includes("harga ongkos sibayak") ||
-    query.includes("harga ongkos rio") ||
-    query.includes("harga ongkos taksima") ||
-    query.includes("harga ongkos sigantang") ||
-    query.includes("harga ongkos sigantang sira") ||
-    query.includes("daftar ongkos") ||
-    query.includes("biaya angkot") ||
-    query.includes("kt") ||
-    query.includes("kama") ||
-    query.includes("bayu") ||
-    query.includes("sigantang") ||
-    query.includes("sigantang sira") ||
-    query.includes("takasima") ||
-    query.includes("rio") ||
-    query.includes("sibayak") ||
-    query.includes("pilih angkot") ||
-    query.includes("pilih angkutan") ||
-    query.includes("pesan") ||
-    query.includes("cara pesan") ||
-    query.includes("bagaimana cara memesan angkutan") ||
-    query.includes("bagaimana cara melakukan pemesanan") ||
-    query.includes("karya transport") ||
-    query.includes("informasi biaya") ||
-    query.includes("informasi biaya angkot") ||
-    query.includes("kelliling berastagi") ||
-    query.includes("mobil") ||
-    query.includes("mobil angkutan") ||
-    query.includes("mobil angkot") ||
-    query.includes("mobil sigantang") ||
-    query.includes("mobil sigantang sira") ||
-    query.includes("mobil kt") ||
-    query.includes("mobil karya transport") ||
-    query.includes("mobil kama") ||
-    query.includes("mobil bayu") ||
-    query.includes("mobil rio") ||
-    query.includes("mobil takasima") ||
-    query.includes("mobil sibayak") ||
-    query.includes("pilihan transportasi") ||
-    query.includes("transportasi terdekat") ||
-    query.includes("jadwal angkot") ||
-    query.includes("daftar angkutan umum") ||
-    query.includes("rute angkutan umum berastagi") ||
-    query.includes("informasi angkutan umum berastagi") ||
-    query.includes("cara menggunakan angkutan umum di berastagi") ||
-    query.includes("akses transportasi di berastagi") ||
-    query.includes("akses angkot di berastagi") ||
-    query.includes("angkutan umum berastagi terbaru") ||
-    query.includes("info angkutan terbaru") ||
-    query.includes("info biaya angkot terbaru") ||
-    query.includes("info terbaru") ||
-    query.includes("cara ke kabanjahe") ||
-    query.includes("cara ke pajak buah") ||
-    query.includes("cara ke tugu perjuangan") ||
-    query.includes("cara ke pajak bawah") ||
-    query.includes("cara ke jalan kolam") ||
-    query.includes("cara ke smpn2") ||
-    query.includes("cara ke smp negeri 2") ||
-    query.includes("cara ke lau sidebuk debuk") ||
-    query.includes("cara ke sidebuk debuk") ||
-    query.includes("cara ke jaranguda") ||
-    query.includes("cara ke gunung sibayak") ||
-    query.includes("cara ke pintu gunung sibayak") ||
-    query.includes("cara ke tempat pemerasan susu sapi") ||
-    query.includes("cara ke pemerasan susu sapi") ||
-    query.includes("cara ke gundaling") ||
-    query.includes("cara ke jalan surya indah") ||
-    query.includes("cara ke lingga") ||
-    query.includes("cara ke desa lingga") ||
-    query.includes("cara ke simpang ujung aji") ||
-    query.includes("cara ke ujung aji") ||
-    query.includes("cara ke aji julu") ||
-    query.includes("cara ke aji jahe") ||
-    query.includes("cara ke bukit kubu") ||
-    query.includes("cara ke mickey holiday") ||
-    query.includes("cara ke miki holiday") ||
-    query.includes("cara ke peceren") ||
-    query.includes("cara ke taman lumbini") ||
-    query.includes("cara ke jalan udara") ||
-    query.includes("cara ke lau kawar") ||
-    query.includes("cara ke gongsol") ||
-    query.includes("cara ke kampung keling") ||
-    query.includes("cara ke keling") ||
-    query.includes("cara ke tongkoh") ||
-    query.includes("ongkos ke kabanjahe") ||
-    query.includes("ongkos ke pajak bawah") ||
-    query.includes("ongkos ke tugu perjuangan") ||
-    query.includes("ongkos ke pajak buah") ||
-    query.includes("ongkos ke jalan kolam") ||
-    query.includes("ongkos ke smpn2") ||
-    query.includes("ongkos ke smp negeri2") ||
-    query.includes("ongkos ke lau sidebuk debuk") ||
-    query.includes("ongkos ke sidebuk debuk") ||
-    query.includes("ongkos ke jaranguda") ||
-    query.includes("ongkos ke gunung sibayak") ||
-    query.includes("ongkos ke pintu gunung sibayak") ||
-    query.includes("ongkos ke pemerasan susu sapi") ||
-    query.includes("ongkos ke tempat pemerasan susu sapi") ||
-    query.includes("ongkos ke gundaling") ||
-    query.includes("ongkos ke jalan surya indah") ||
-    query.includes("ongkos ke lingga") ||
-    query.includes("ongkos ke desa lingga") ||
-    query.includes("ongkos ke simpang ujung aji") ||
-    query.includes("ongkos ke ujung aji") ||
-    query.includes("ongkos ke aji julu") ||
-    query.includes("ongkos ke aji jahe") ||
-    query.includes("ongkos ke bukit kubu") ||
-    query.includes("ongkos ke mickey holiday") ||
-    query.includes("ongkos ke miki") ||
-    query.includes("ongkos ke miki holiday") ||
-    query.includes("ongkos ke miky holiday") ||
-    query.includes("ongkos ke peceren") ||
-    query.includes("ongkos ke taman lumbini") ||
-    query.includes("ongkos ke jalan udara") ||
-    query.includes("ongkos ke lau kawar") ||
-    query.includes("ongkos ke gongsol") ||
-    query.includes("ongkos ke kampung keling") ||
-    query.includes("ongkos ke keling") ||
-    query.includes("ongkos ke tongkoh") ||
-    query.includes("ongkos ke tongkeh") ||
-    query.includes("ongkos ke kabanjahe dari berastagi") ||
-    query.includes("ongkos ke kabanjahe dari pajak buah") ||
-    query.includes("ongkos ke kabanjahe dari tugu perjuangan") ||
-    query.includes("ongkos ke kabanjahe dari lau kawar") ||
-    query.includes("ongkos ke kabanjahe dari bukit kubu") ||
-    query.includes("ongkos ke kabanjahe dari jalan udara") ||
-    query.includes("ongkos ke kabanjahe dari miki holiday") ||
-    query.includes("ongkos ke kabanjahe dari peceren") ||
-    query.includes("ongkos ke kabanjahe dari taman lumbini") ||
-    query.includes("ongkos dari kabanjahe ke berastagi") ||
-    query.includes("ongkos dari kabanjahe ke pajak buah") ||
-    query.includes("ongkos dari kabanjahe ke tugu perjuangan") ||
-    query.includes("ongkos dari kabanjahe ke bukit kubu") ||
-    query.includes("ongkos dari kabanjahe ke peceren") ||
-    query.includes("ongkos dari kabanjahe ke gundaling") ||
-    query.includes("ongkos dari kabanjahe ke jaranguda") ||
-    query.includes("ongkos dari kabanjahe ke lingga") ||
-    query.includes("ongkos dari kabanjahe ke jalan udara") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("ongkos dari berastagi ke ") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("info ongkos")
+    query.includes("peta")
   ) {
-    var targetElement = document.getElementById("menu");
+    var targetElement = document.getElementById("map");
     targetElement.scrollIntoView({ behavior: "smooth" });
   } else if (
     query.includes("program2") ||
     query.includes("pilihan2") ||
-    query.includes("peta") ||
-    query.includes("peta angkutan") ||
-    query.includes("peta angkot") ||
-    query.includes("peta angkot kt") ||
-    query.includes("peta angkot karya transport") ||
-    query.includes("peta angkot kama") ||
-    query.includes("peta angkot bayu") ||
-    query.includes("peta angkot takasima") ||
-    query.includes("peta angkot rio") ||
-    query.includes("peta angkot sibayak") ||
-    query.includes("peta angkot sigantang") ||
-    query.includes("peta angkot sigantang sira") ||
-    query.includes("peta kama") ||
-    query.includes("peta kt") ||
-    query.includes("peta karya transport") ||
-    query.includes("peta bayu") ||
-    query.includes("peta sibayak") ||
-    query.includes("peta rio") ||
-    query.includes("peta sigantang") ||
-    query.includes("peta sigantang sira") ||
-    query.includes("peta wilayah") ||
-    query.includes("peta wilayah berastagi") ||
-    query.includes("wilayah berastagi") ||
-    query.includes("marka berastagi") ||
-    query.includes("tampilan peta") ||
-    query.includes("tampilan peta berastagi") ||
-    query.includes("tampilan peta angkot berastagi") ||
-    query.includes("rute berastagi") ||
-    query.includes("rute angkot berastagi") ||
-    query.includes("rute angkutan berastagi") ||
-    query.includes("rute peta") ||
-    query.includes("peta rute") ||
-    query.includes("peta rute angkutan berastagi") ||
-    query.includes("peta rute kt") ||
-    query.includes("peta rute karya transport") ||
-    query.includes("peta rute kama") ||
-    query.includes("peta rute bayu") ||
-    query.includes("peta rute sigantang") ||
-    query.includes("peta rute sigantang sira") ||
-    query.includes("peta rute sibayak") ||
-    query.includes("peta rute takasima") ||
-    query.includes("peta rute angkutan kt") ||
-    query.includes("peta rute angkutan karya transport") ||
-    query.includes("peta rute angkutan kama") ||
-    query.includes("peta rute angkutan bayu") ||
-    query.includes("peta rute angkutan sigantang") ||
-    query.includes("peta rute angkutan sigantang sira") ||
-    query.includes("peta rute angkutan sibayak") ||
-    query.includes("peta rute angkutan takasima") ||
-    query.includes("peta rute angkot kt") ||
-    query.includes("peta rute angkot karya transport") ||
-    query.includes("peta rute angkot kama") ||
-    query.includes("peta rute angkot bayu") ||
-    query.includes("peta rute angkot sigantang") ||
-    query.includes("peta rute angkot sigantang sira") ||
-    query.includes("peta rute angkot sibayak") ||
-    query.includes("peta rute angkot takasima") ||
-    query.includes("wilayah kt") ||
-    query.includes("wilayah kama") ||
-    query.includes("wilayah bayu") ||
-    query.includes("wilayah takasima") ||
-    query.includes("wilayah sigantang") ||
-    query.includes("wilayah rio") ||
-    query.includes("wilayah sigantang sira") ||
-    query.includes("wilayah karya transport") ||
-    query.includes("wilayah sibayak") ||
-    query.includes("map angkutan umum berastagi") ||
-    query.includes("map") ||
-    query.includes("opsi2")
-  ) {
-    var targetElement = document.getElementById("map");
-    targetElement.scrollIntoView({ behavior: "smooth" });
-  } else if (
-    query.includes("program3") ||
-    query.includes("berastagi") ||
-    query.includes("tentang berastagi") ||
-    query.includes("mengenai berastagi") ||
-    query.includes("info berastagi") ||
-    query.includes("informasi berastagi") ||
-    query.includes("informasi tentang berastagi") ||
-    query.includes("hal hal di berastagi") ||
-    query.includes("kenapa berastagi") ||
-    query.includes("mengapa berastagi") ||
-    query.includes("bagaimana dengan berastagi") ||
-    query.includes("yang perlu diketahui") ||
-    query.includes("destinasi wisata") ||
-    query.includes("destinasi wisata berastagi") ||
-    query.includes("destinasi wisata di berastagi") ||
-    query.includes("pilihan tempat wisata di berastagi") ||
-    query.includes("wisata apa saja yang ada di berastagi") ||
-    query.includes("tempat wisata apa saja di berastagi") ||
-    query.includes("keindahan berastagi") ||
-    query.includes("cuaca berastagi") ||
-    query.includes("udara berastagi") ||
-    query.includes("udara di berastagi") ||
-    query.includes("suasana berastagi") ||
-    query.includes("suasana di berastagi") ||
-    query.includes("keadaan berastagi") ||
-    query.includes("keadaan di berastagi") ||
-    query.includes("yang perlu di hindari") ||
-    query.includes("jeruk berastagi") ||
-    query.includes("bagaimana cara ke berastagi") ||
-    query.includes("apa itu berastagi") ||
-    query.includes("apa berastagi") ||
-    query.includes("arah ke berastagi") ||
-    query.includes("cara ke berastagi") ||
-    query.includes("hotel berastagi") ||
-    query.includes("bunga di berastagi") ||
-    query.includes("info tentang berastagi") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("") ||
-    query.includes("opsi3")
+    query.includes("tentang")
   ) {
     var targetElement = document.getElementById("about");
     targetElement.scrollIntoView({ behavior: "smooth" });
-  } else if (
-    query.includes("program4") ||
-    query.includes("pilihan4") ||
-    query.includes("opsi4")
-  ) {
-    var targetElement = document.getElementById("map");
-    targetElement.scrollIntoView({ behavior: "smooth" });
-  } else if (
-    query.includes("program5") ||
-    query.includes("pilihan5") ||
-    query.includes("opsi5")
-  ) {
-    var targetElement = document.getElementById("map");
-    targetElement.scrollIntoView({ behavior: "smooth" });
-  } else if (
-    query.includes("program6") ||
-    query.includes("pilihan6") ||
-    query.includes("opsi6")
-  ) {
-    var targetElement = document.getElementById("about");
+  } else if (query.includes("program3") || query.includes("daftar")) {
+    var targetElement = document.getElementById("menu");
     targetElement.scrollIntoView({ behavior: "smooth" });
   } else {
     alert("Pencarian tidak ditemukan.");
@@ -1240,3 +884,263 @@ function showMap(selectedTransportation) {
     mapImage.classList.remove("show");
   }, false);
 }
+
+// // Leaflet Routing Machine
+// // Inisialisasi peta
+// var mymap = L.map("mymap").setView([3.189, 98.5089], 13);
+
+// // Tambahkan tile layer untuk peta dasar
+// L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+//   attribution: "© OpenStreetMap contributors",
+// }).addTo(mymap);
+
+// // Tambahkan geocoder control
+// var geocoder = L.Control.geocoder({
+//   defaultMarkGeocode: false,
+// })
+//   .on("markgeocode", function (e) {
+//     var latlng = e.geocode.center;
+//     L.Routing.control({
+//       waypoints: [
+//         L.latLng(3.1902, 98.5087), // Koordinat Berastagi
+//         latlng,
+//       ],
+//       routeWhileDragging: true,
+//       routeLine: function (route, options) {
+//         var line = L.Routing.line(route, {
+//           addWaypoints: false,
+//           extendToWaypoints: false,
+//           routeLine: function (routeLine) {
+//             return L.polyline(routeLine.getLatLngs(), { color: "blue" });
+//           },
+//         });
+//         return line;
+//       },
+//       createMarker: function (i, waypoint, n) {
+//         // Buat marker untuk setiap destinasi dengan warna yang berbeda-beda
+//         var colors = ["red", "blue", "green", "yellow", "orange"];
+//         var color = colors[i % colors.length];
+//         return L.marker(waypoint.latLng, {
+//           draggable: true,
+//           icon: L.icon({
+//             iconUrl:
+//               "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-" +
+//               color +
+//               ".png",
+//             shadowUrl:
+//               "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
+//             iconSize: [25, 41],
+//             iconAnchor: [12, 41],
+//             shadowSize: [41, 41],
+//             shadowAnchor: [12, 41],
+//           }),
+//         }).bindPopup("Destinasi #" + (i + 1));
+//       },
+//       collapsible: true,
+//     }).addTo(mymap);
+
+//     // Menambahkan warna background ke deskripsi rute
+//     var routeContainer = document.querySelector(".leaflet-routing-container");
+//     if (routeContainer) {
+//       routeContainer.style.backgroundColor = "white";
+//       routeContainer.style.padding = "2px";
+//     }
+//   })
+//   .addTo(mymap);
+// // lineeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+// // Fungsi untuk menghapus rute
+// if (routingControl) {
+//   mymap.removeControl(routingControl);
+//   routingControl = null;
+// }
+// function hapusRute() {
+//   if (routingControl) {
+//     mymap.removeControl(routingControl);
+//     routingControl = null;
+//   }
+// }
+
+// // Tambahkan tombol "Hapus Rute"
+// var hapusRuteButton = L.Control.extend({
+//   options: {
+//     position: "topright",
+//   },
+
+//   onAdd: function () {
+//     var container = L.DomUtil.create("div", "leaflet-bar leaflet-control");
+
+//     var link = L.DomUtil.create("a", "leaflet-control-custom");
+//     link.href = "#";
+//     link.title = "Hapus Rute";
+//     link.innerHTML = "Hapus Rute";
+//     L.DomEvent.on(link, "click", L.DomEvent.stop).on(link, "click", hapusRute);
+
+//     container.appendChild(link);
+
+//     return container;
+//   },
+// });
+
+// mymap.addControl(new hapusRuteButton());
+// test
+// // Simpan objek routing control ke dalam variabel global
+// var routingControl;
+
+// // ...
+
+// // Tambahkan geocoder control
+// var geocoder = L.Control.geocoder({
+//   defaultMarkGeocode: false,
+// })
+//   .on("markgeocode", function (e) {
+//     // Hapus rute sebelumnya jika ada
+//     if (routingControl) {
+//       mymap.removeControl(routingControl);
+//       routingControl = null;
+//     }
+
+//     var latlng = e.geocode.center;
+//     routingControl = L.Routing.control({
+//       waypoints: [
+//         L.latLng(3.1902, 98.5087), // Koordinat Berastagi
+//         latlng,
+//       ],
+//       // ...
+//     }).addTo(mymap);
+
+//     // ...
+//   })
+//   .addTo(mymap);
+
+// // Fungsi untuk menghapus rute
+// function hapusRute() {
+//   if (routingControl) {
+//     mymap.removeControl(routingControl);
+//     routingControl = null;
+//   }
+// }
+
+// // Tambahkan tombol "Hapus Rute"
+// var hapusRuteButton = L.Control.extend({
+//   options: {
+//     position: "topright",
+//   },
+
+//   onAdd: function () {
+//     var container = L.DomUtil.create("div", "leaflet-bar leaflet-control");
+
+//     var link = L.DomUtil.create("a", "leaflet-control-custom");
+//     link.href = "#";
+//     link.title = "Hapus Rute";
+//     link.innerHTML = "Hapus Rute";
+//     L.DomEvent.on(link, "click", L.DomEvent.stop).on(link, "click", hapusRute);
+
+//     container.appendChild(link);
+
+//     return container;
+//   },
+// });
+
+// mymap.addControl(new hapusRuteButton());
+// dangggggggggggggggggggggggggggggggggggggggggggggg--------------------------------------------
+// Inisialisasi peta
+var mymap = L.map("mymap").setView([3.189, 98.5089], 13);
+
+// Tambahkan tile layer untuk peta dasar
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution: "© OpenStreetMap contributors",
+}).addTo(mymap);
+
+// Simpan objek routing control ke dalam variabel global
+var routingControl = null;
+
+// Fungsi untuk menghapus rute
+function hapusRute() {
+  if (routingControl !== null) {
+    mymap.removeControl(routingControl);
+    routingControl = null;
+  }
+}
+
+// Tambahkan geocoder control
+var geocoder = L.Control.geocoder({
+  defaultMarkGeocode: false,
+})
+  .on("markgeocode", function (e) {
+    // Hapus rute sebelumnya jika ada
+    hapusRute();
+
+    var latlng = e.geocode.center;
+    routingControl = L.Routing.control({
+      waypoints: [
+        L.latLng(3.1902, 98.5087), // Koordinat Berastagi
+        latlng,
+      ],
+      routeWhileDragging: true,
+      routeLine: function (route, options) {
+        var line = L.Routing.line(route, {
+          addWaypoints: false,
+          extendToWaypoints: false,
+          routeLine: function (routeLine) {
+            return L.polyline(routeLine.getLatLngs(), { color: "blue" });
+          },
+        });
+        return line;
+      },
+      createMarker: function (i, waypoint, n) {
+        // Buat marker untuk setiap destinasi dengan warna yang berbeda-beda
+        var colors = ["red", "blue", "green", "yellow", "orange"];
+        var color = colors[i % colors.length];
+        return L.marker(waypoint.latLng, {
+          draggable: true,
+          icon: L.icon({
+            iconUrl:
+              "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-" +
+              color +
+              ".png",
+            shadowUrl:
+              "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            shadowSize: [41, 41],
+            shadowAnchor: [12, 41],
+          }),
+        }).bindPopup("Destinasi #" + (i + 1));
+      },
+      collapsible: true,
+    }).addTo(mymap);
+
+    // Menambahkan warna background ke deskripsi rute
+    var routeContainer = document.querySelector(".leaflet-routing-container");
+    if (routeContainer) {
+      routeContainer.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+      routeContainer.style.padding = "2px";
+    }
+  })
+  .addTo(mymap);
+
+// Tambahkan tombol "Hapus Rute"
+var hapusRuteButton = L.Control.extend({
+  options: {
+    position: "topright",
+  },
+
+  onAdd: function () {
+    var container = L.DomUtil.create("div", "leaflet-bar leaflet-control");
+
+    var link = L.DomUtil.create("a", "leaflet-control-custom");
+    link.href = "#map";
+    link.title = "Hapus Rute";
+    link.innerHTML = "X";
+    L.DomEvent.on(link, "click", function (e) {
+      hapusRute();
+      L.DomEvent.stopPropagation(e);
+    });
+
+    container.appendChild(link);
+
+    return container;
+  },
+});
+
+mymap.addControl(new hapusRuteButton());

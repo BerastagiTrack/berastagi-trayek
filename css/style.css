@@ -31,6 +31,22 @@ body .navbar .navbar-logo {
   font-family: "Six Caps", sans-serif;
 }
 
+/* body .mymap {
+  font-family: "Raleway", sans-serif;
+} */
+/* PETA */
+.mymap {
+  width: 100%;
+  height: 550px;
+  /* border: 1px solid black; */
+  position: relative;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+  color: #000000;
+  box-shadow: 0 1px 3px rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
 /* Navbar */
 .navbar {
   display: flex;
@@ -256,14 +272,14 @@ body .navbar .navbar-logo {
 }
 
 /* Peta Jalur Section */
-.map .container {
+/* .map .container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
   background-color: rgba(235, 231, 228, 255);
   box-shadow: 0 1px 3px rgb(0, 0, 0);
   border-radius: 5px;
-}
+} */
 
 /* .map h1 {
   text-align: center;
@@ -271,7 +287,7 @@ body .navbar .navbar-logo {
   margin-top: 0;
 } */
 
-.map .transportation-box {
+/* .map .transportation-box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -315,7 +331,7 @@ body .navbar .navbar-logo {
 
 .map .map-image.show {
   opacity: 1;
-}
+} */
 
 /* About Section */
 .about,
@@ -376,7 +392,7 @@ body .navbar .navbar-logo {
   font-size: 1.25rem;
   font-weight: 200;
   line-height: 1.6;
-  text-align: left;
+  text-align: justify;
   color: var(--primary);
 }
 
@@ -822,6 +838,7 @@ footer .credit p {
   font-size: 1.2rem;
   line-height: 1.8rem;
   margin-top: 1.2rem;
+  text-align: justify;
 }
 
 .modal-content .menu-stars {

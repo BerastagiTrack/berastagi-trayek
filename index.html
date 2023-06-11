@@ -14,11 +14,11 @@
  <!-- meta -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="Peta Jalur Trayek Angkutan Umum yang ada di Berastagi">
-    <meta name="keywords" content="berastagi, kabanjahe, stasiun pajak bawah, tugu perjuangan, pajak buah, pemilihan sesuai tujuan, stasiun jalan kolam, smpn 2, lau sidebuk debuk, pemandian air panas, jaranguda, pintu gunung sibayak, pemerasan susu sapi, gundaling, jalan surya indah, lingga, simpang ujung aji, aji julu, aji jahe, bukit kubu, mikey holiday, peceren, taman lumbini, jalan udara, lau kawar, gongsol, kampung keling, tongkoh, tongkeh, angkot berastagi, angkutan umum di berastagi, tanah karo, ongkos angkot, naik turun, stasiun angkutan umum, keliling berastagi, trayek, peta jalur, kaban jahe, daftar rute angkot terlengkap, ongkos bus, nama bus, nama angkot, wisata, buah, rute angkutan umum, transportasi">
+    <meta name="description" content="Keliling Berastagi dengan bantuan pemilihan transportasi sesuai tujuan anda tanpa repot secara GRATIS!!. Pergi Sekarang">
+    <meta name="keywords" content="berastagi, kabanjahe, duncan dancin tarigan, stasiun pajak bawah, tugu perjuangan, pajak buah, pemilihan sesuai tujuan, stasiun jalan kolam, smpn 2, lau sidebuk debuk, pemandian air panas, jaranguda, pintu gunung sibayak, pemerasan susu sapi, gundaling, jalan surya indah, lingga, simpang ujung aji, aji julu, aji jahe, bukit kubu, mikey holiday, peceren, taman lumbini, jalan udara, lau kawar, gongsol, kampung keling, tongkoh, tongkeh, angkot berastagi, angkutan umum di berastagi, tanah karo, ongkos angkot, naik turun, stasiun angkutan umum, keliling berastagi, trayek, peta jalur, kaban jahe, daftar rute angkot terlengkap, ongkos bus, nama bus, nama angkot, wisata, buah, rute angkutan umum, transportasi">
     <meta name="author" content="Duncan Tarigan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Keliling Berastagi dengan bantuan pemilihan transportasi sesuai tujuan anda tanpa repot secara GRATIS!!. Pergi Sekarang</title>
+    <title>Peta Jalur Trayek Angkutan Umum yang ada di Berastagi</title>
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,12 +27,17 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600;700&display=swap"
            rel="stylesheet"
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link 
-        href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap" 
-        rel="stylesheet"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link 
+      href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap" 
+           rel="stylesheet"
         />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;700&display=swap" 
+           rel="stylesheet">
 
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
@@ -42,6 +47,15 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io2/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io2/favicon-16x16.png">
     <link rel="manifest" href="favicon_io2/site.webmanifest">
+
+    <!-- Leaflet Routing Machine -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"
+    />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
 
     <!-- my style -->
     <link rel="stylesheet" href="css/style.css" />
@@ -129,9 +143,20 @@
     <section id="map" class="map">
       <h2><span>Peta Jalur</span> Angkutan</h2>
       <p>
-        Berikut adalah gambaran peta dari jalur angkutan umum yang ada di Berastagi
+        Silahkan masukkan tujuan anda pada peta jalur angkutan umum yang ada di Berastagi
       </p>
-      <div class="container">
+      <div id="mymap" class="mymap"></div>
+      <!-- <div>
+        <input type="text" id="fromInput" placeholder="Dari">
+        <input type="text" id="toInput" placeholder="Ke">
+        <button id="routeButton">Rutekan</button>
+
+      </div> -->
+      
+     
+      
+      <!-- <button id="add-route-button">Tambah Rute</button> -->
+      <!-- <div class="container">
                <div class="transportation-box">
           <label for="transportation-select">Pilih Nama Angkutan Umum:</label>
           <select id="transportation-select" onchange="showMap(this.value)">
@@ -151,7 +176,7 @@
             alt="Peta Jalur Angkutan"
           />
         </div>
-      </div>
+      </div> -->
     </section>
     
 
@@ -668,6 +693,7 @@
     </script>
 
     <!-- My Javascript -->
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
     <script src="js/script.js"></script>
     <!-- My PHP -->
     <!-- <php src="php/koneksi.php"></php> -->
