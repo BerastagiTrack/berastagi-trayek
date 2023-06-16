@@ -49,17 +49,9 @@ function handleKeyPress(event) {
   }
 }
 
-// // Toggle class active untuk daftar pilihan angkutan
-// const truck = document.querySelector(".truck");
-// document.querySelector("#truck-button").onclick = (e) => {
-//   truck.classList.toggle("active");
-//   e.preventDefault();
-// };
-
 // KLik diluar element
 const GB = document.querySelector("#git-branch");
 const SB = document.querySelector("#search-button");
-// const T = document.querySelector("#truck-button");
 
 document.addEventListener("click", function (e) {
   if (!GB.contains(e.target) && !navbarNav.contains(e.target)) {
@@ -68,14 +60,6 @@ document.addEventListener("click", function (e) {
 
   if (!SB.contains(e.target) && !searchForm.contains(e.target)) {
     searchForm.classList.remove("active");
-  }
-
-  // if (!T.contains(e.target) && !truck.contains(e.target)) {
-  //   truck.classList.remove("active");
-  // }
-
-  if (!IDM.contains(e.target) && !modal.contains(e.target)) {
-    modal.classList.remove("active");
   }
 });
 
@@ -94,31 +78,6 @@ document.querySelector(".modal .close-icon").onclick = (e) => {
   e.preventDefault();
 };
 
-// klik diluar modal KT
-const modal = document.querySelector("#item-detail-modal");
-window.onclick = (e) => {
-  if (e.target === modal) {
-    modal.style.display = "none";
-  }
-};
-
-// // Toggle class active untuk info setiap angkutan
-// const modal = document.querySelector(".modal");
-// document.querySelector("#item-detail-modal").onclick = (e) => {
-//   modal.classList.toggle("active");
-//   e.preventDefault();
-// };
-
-// // Click diluar element
-// const IDM = document.querySelector("#item-detail-modal");
-// const IDMK = document.querySelector("#item-detail-modal-kama");
-
-// document.addEventListener("click", function (e) {
-//   if (!IDM.contains(e.target) && !modal.contains(e.target)) {
-//     modal.classList.remove("active");
-//   }
-// });
-
 // Modal Box Kama
 const itemDetailModalKama = document.querySelector("#item-detail-modal-kama");
 const itemDetailButtonKama = document.querySelector(".item-detail-button-kama");
@@ -134,14 +93,6 @@ document.querySelector(".modalkama .close-icon").onclick = (e) => {
   e.preventDefault();
 };
 
-// klik diluar modal kama
-const modalkama = document.querySelector("#item-detail-modal-kama");
-window.onclick = (e) => {
-  if (e.target === modalkama) {
-    modalkama.style.display = "none";
-  }
-};
-
 // Modal Box Bayu
 const itemDetailModalBayu = document.querySelector("#item-detail-modal-bayu");
 const itemDetailButtonBayu = document.querySelector(".item-detail-button-bayu");
@@ -155,14 +106,6 @@ itemDetailButtonBayu.onclick = (e) => {
 document.querySelector(".modalbayu .close-icon").onclick = (e) => {
   itemDetailModalBayu.style.display = "none";
   e.preventDefault();
-};
-
-// klik diluar modal bayu
-const modalbayu = document.querySelector("#item-detail-modal-bayu");
-window.onclick = (e) => {
-  if (e.target === modalbayu) {
-    modalbayu.style.display = "none";
-  }
 };
 
 // Modal Box Sibayak
@@ -184,14 +127,6 @@ document.querySelector(".modalsibayak .close-icon").onclick = (e) => {
   e.preventDefault();
 };
 
-// klik diluar modal sibayak
-const modalsibayak = document.querySelector("#item-detail-modal-sibayak");
-window.onclick = (e) => {
-  if (e.target === modalsibayak) {
-    modalsibayak.style.display = "none";
-  }
-};
-
 // Modal Box Rio
 const itemDetailModalRio = document.querySelector("#item-detail-modal-rio");
 const itemDetailButtonRio = document.querySelector(".item-detail-button-rio");
@@ -205,14 +140,6 @@ itemDetailButtonRio.onclick = (e) => {
 document.querySelector(".modalrio .close-icon").onclick = (e) => {
   itemDetailModalRio.style.display = "none";
   e.preventDefault();
-};
-
-// klik diluar modal rio
-const modalrio = document.querySelector("#item-detail-modal-rio");
-window.onclick = (e) => {
-  if (e.target === modalrio) {
-    modalrio.style.display = "none";
-  }
 };
 
 // Modal Box Takasima
@@ -234,14 +161,6 @@ document.querySelector(".modaltakasima .close-icon").onclick = (e) => {
   e.preventDefault();
 };
 
-// klik diluar modal takasima
-const modaltakasima = document.querySelector("#item-detail-modal-takasima");
-window.onclick = (e) => {
-  if (e.target === modaltakasima) {
-    modaltakasima.style.display = "none";
-  }
-};
-
 // Modal Box Sigantang
 const itemDetailModalSigantang = document.querySelector(
   "#item-detail-modal-sigantang"
@@ -261,13 +180,47 @@ document.querySelector(".modalsigantang .close-icon").onclick = (e) => {
   e.preventDefault();
 };
 
-// klik diluar modal sigantang
-const modalsigantang = document.querySelector("#item-detail-modal-sigantang");
-window.onclick = (e) => {
-  if (e.target === modalsigantang) {
-    modalsigantang.style.display = "none";
+// Function to handle click outside modal
+function handleClickOutsideModal(event, modal) {
+  if (event.target === modal) {
+    modal.style.display = "none";
   }
-};
+}
+
+// klik diluar modal KT
+window.addEventListener("click", (e) => {
+  handleClickOutsideModal(e, itemDetailModal);
+});
+
+// klik diluar modal kama
+window.addEventListener("click", (e) => {
+  handleClickOutsideModal(e, itemDetailModalKama);
+});
+
+// klik diluar modal bayu
+window.addEventListener("click", (e) => {
+  handleClickOutsideModal(e, itemDetailModalBayu);
+});
+
+// klik diluar modal sibayak
+window.addEventListener("click", (e) => {
+  handleClickOutsideModal(e, itemDetailModalSibayak);
+});
+
+// klik diluar modal rio
+window.addEventListener("click", (e) => {
+  handleClickOutsideModal(e, itemDetailModalRio);
+});
+
+// klik diluar modal takasima
+window.addEventListener("click", (e) => {
+  handleClickOutsideModal(e, itemDetailModalTakasima);
+});
+
+// klik diluar modal sigantang
+window.addEventListener("click", (e) => {
+  handleClickOutsideModal(e, itemDetailModalSigantang);
+});
 
 // Combo Box
 // Data
@@ -856,193 +809,37 @@ comboBox1.addEventListener("change", updateComboBox4);
 comboBox2.addEventListener("change", updateComboBox1);
 comboBox3.addEventListener("change", updateComboBox1);
 
-// Peta Jalur
-function showMap(selectedTransportation) {
-  var mapImage = document.getElementById("map-image");
+// // Peta Jalur
+// function showMap(selectedTransportation) {
+//   var mapImage = document.getElementById("map-image");
 
-  if (selectedTransportation === "KT") {
-    mapImage.src = "img/peta/Upload/peta kt.jpg";
-  } else if (selectedTransportation === "KAMA") {
-    mapImage.src = "img/peta/Upload/peta kama.jpg";
-  } else if (selectedTransportation === "TAKASIMA") {
-    mapImage.src = "img/peta/Upload/peta takasima.jpg";
-  } else if (selectedTransportation === "RIO") {
-    mapImage.src = "img/peta/Upload/peta rio.jpg";
-  } else if (selectedTransportation === "SIBAYAK") {
-    mapImage.src = "img/peta/Upload/peta sibayak.jpg";
-  } else if (selectedTransportation === "SIGANTANG") {
-    mapImage.src = "img/peta/Upload/peta sigantang.jpg";
-  } else if (selectedTransportation === "BAYU") {
-    mapImage.src = "img/peta/Upload/peta bayu.jpg";
-  }
+//   if (selectedTransportation === "KT") {
+//     mapImage.src = "img/peta/Upload/peta kt.jpg";
+//   } else if (selectedTransportation === "KAMA") {
+//     mapImage.src = "img/peta/Upload/peta kama.jpg";
+//   } else if (selectedTransportation === "TAKASIMA") {
+//     mapImage.src = "img/peta/Upload/peta takasima.jpg";
+//   } else if (selectedTransportation === "RIO") {
+//     mapImage.src = "img/peta/Upload/peta rio.jpg";
+//   } else if (selectedTransportation === "SIBAYAK") {
+//     mapImage.src = "img/peta/Upload/peta sibayak.jpg";
+//   } else if (selectedTransportation === "SIGANTANG") {
+//     mapImage.src = "img/peta/Upload/peta sigantang.jpg";
+//   } else if (selectedTransportation === "BAYU") {
+//     mapImage.src = "img/peta/Upload/peta bayu.jpg";
+//   }
 
-  setTimeout(function () {
-    mapImage.classList.add("show");
-  }, 10);
+//   setTimeout(function () {
+//     mapImage.classList.add("show");
+//   }, 10);
 
-  setTimeout(function () {
-    mapImage.classList.remove("show");
-  }, false);
-}
+//   setTimeout(function () {
+//     mapImage.classList.remove("show");
+//   }, false);
+// }
 
 // // Leaflet Routing Machine
-// // Inisialisasi peta
-// var mymap = L.map("mymap").setView([3.189, 98.5089], 13);
 
-// // Tambahkan tile layer untuk peta dasar
-// L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-//   attribution: "© OpenStreetMap contributors",
-// }).addTo(mymap);
-
-// // Tambahkan geocoder control
-// var geocoder = L.Control.geocoder({
-//   defaultMarkGeocode: false,
-// })
-//   .on("markgeocode", function (e) {
-//     var latlng = e.geocode.center;
-//     L.Routing.control({
-//       waypoints: [
-//         L.latLng(3.1902, 98.5087), // Koordinat Berastagi
-//         latlng,
-//       ],
-//       routeWhileDragging: true,
-//       routeLine: function (route, options) {
-//         var line = L.Routing.line(route, {
-//           addWaypoints: false,
-//           extendToWaypoints: false,
-//           routeLine: function (routeLine) {
-//             return L.polyline(routeLine.getLatLngs(), { color: "blue" });
-//           },
-//         });
-//         return line;
-//       },
-//       createMarker: function (i, waypoint, n) {
-//         // Buat marker untuk setiap destinasi dengan warna yang berbeda-beda
-//         var colors = ["red", "blue", "green", "yellow", "orange"];
-//         var color = colors[i % colors.length];
-//         return L.marker(waypoint.latLng, {
-//           draggable: true,
-//           icon: L.icon({
-//             iconUrl:
-//               "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-" +
-//               color +
-//               ".png",
-//             shadowUrl:
-//               "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
-//             iconSize: [25, 41],
-//             iconAnchor: [12, 41],
-//             shadowSize: [41, 41],
-//             shadowAnchor: [12, 41],
-//           }),
-//         }).bindPopup("Destinasi #" + (i + 1));
-//       },
-//       collapsible: true,
-//     }).addTo(mymap);
-
-//     // Menambahkan warna background ke deskripsi rute
-//     var routeContainer = document.querySelector(".leaflet-routing-container");
-//     if (routeContainer) {
-//       routeContainer.style.backgroundColor = "white";
-//       routeContainer.style.padding = "2px";
-//     }
-//   })
-//   .addTo(mymap);
-// // lineeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-// // Fungsi untuk menghapus rute
-// if (routingControl) {
-//   mymap.removeControl(routingControl);
-//   routingControl = null;
-// }
-// function hapusRute() {
-//   if (routingControl) {
-//     mymap.removeControl(routingControl);
-//     routingControl = null;
-//   }
-// }
-
-// // Tambahkan tombol "Hapus Rute"
-// var hapusRuteButton = L.Control.extend({
-//   options: {
-//     position: "topright",
-//   },
-
-//   onAdd: function () {
-//     var container = L.DomUtil.create("div", "leaflet-bar leaflet-control");
-
-//     var link = L.DomUtil.create("a", "leaflet-control-custom");
-//     link.href = "#";
-//     link.title = "Hapus Rute";
-//     link.innerHTML = "Hapus Rute";
-//     L.DomEvent.on(link, "click", L.DomEvent.stop).on(link, "click", hapusRute);
-
-//     container.appendChild(link);
-
-//     return container;
-//   },
-// });
-
-// mymap.addControl(new hapusRuteButton());
-// test
-// // Simpan objek routing control ke dalam variabel global
-// var routingControl;
-
-// // ...
-
-// // Tambahkan geocoder control
-// var geocoder = L.Control.geocoder({
-//   defaultMarkGeocode: false,
-// })
-//   .on("markgeocode", function (e) {
-//     // Hapus rute sebelumnya jika ada
-//     if (routingControl) {
-//       mymap.removeControl(routingControl);
-//       routingControl = null;
-//     }
-
-//     var latlng = e.geocode.center;
-//     routingControl = L.Routing.control({
-//       waypoints: [
-//         L.latLng(3.1902, 98.5087), // Koordinat Berastagi
-//         latlng,
-//       ],
-//       // ...
-//     }).addTo(mymap);
-
-//     // ...
-//   })
-//   .addTo(mymap);
-
-// // Fungsi untuk menghapus rute
-// function hapusRute() {
-//   if (routingControl) {
-//     mymap.removeControl(routingControl);
-//     routingControl = null;
-//   }
-// }
-
-// // Tambahkan tombol "Hapus Rute"
-// var hapusRuteButton = L.Control.extend({
-//   options: {
-//     position: "topright",
-//   },
-
-//   onAdd: function () {
-//     var container = L.DomUtil.create("div", "leaflet-bar leaflet-control");
-
-//     var link = L.DomUtil.create("a", "leaflet-control-custom");
-//     link.href = "#";
-//     link.title = "Hapus Rute";
-//     link.innerHTML = "Hapus Rute";
-//     L.DomEvent.on(link, "click", L.DomEvent.stop).on(link, "click", hapusRute);
-
-//     container.appendChild(link);
-
-//     return container;
-//   },
-// });
-
-// mymap.addControl(new hapusRuteButton());
-// dangggggggggggggggggggggggggggggggggggggggggggggg--------------------------------------------
 // Inisialisasi peta
 var mymap = L.map("mymap").setView([3.189, 98.5089], 13);
 
@@ -1095,15 +892,11 @@ var geocoder = L.Control.geocoder({
           draggable: true,
           icon: L.icon({
             iconUrl:
-              "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-" +
+              "https://raw.githubusercontent.com/BerastagiTrack/ikon/main/car-solid-" +
               color +
               ".png",
-            shadowUrl:
-              "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
-            iconSize: [25, 41],
-            iconAnchor: [12, 41],
-            shadowSize: [41, 41],
-            shadowAnchor: [12, 41],
+            iconSize: [70, 60],
+            iconAnchor: [32, 41],
           }),
         }).bindPopup("Destinasi #" + (i + 1));
       },

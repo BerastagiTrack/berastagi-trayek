@@ -57,6 +57,12 @@
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
 
+    <!-- font awesome untuk icon mobil -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  
     <!-- my style -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -91,39 +97,7 @@
          />
         <label for="search-box" onclick="search()"><i data-feather="search"></i></label>
       </div>
-     
       <!-- Search Form End -->
-
-      
-      
-      <!-- Daftar Track start -->
-      <!-- <div class="truck">
-        <div class="truck-item">
-          <img src="img/jt/KT.jpg" alt="Karya Transport">
-          <div class="item-detail">
-            <h3>Karya Transport</h3>
-            <div class="item-price">IDR 3K Turun Dekat</div>
-          </div>
-          <i data-feather="trash-2" class="remove-item"></i>
-        </div>
-        <div class="truck-item">
-          <img src="img/jt/kama.jpg" alt="kama">
-          <div class="item-detail">
-            <h3>Kama</h3>
-            <div class="item-price">IDR 3K Turun Dekat</div>
-          </div>
-          <i data-feather="trash-2" class="remove-item"></i>
-        </div>
-        <div class="truck-item">
-          <img src="img/jt/KT.jpg" alt="Karya Transport">
-          <div class="item-detail">
-            <h3>Karya Transport</h3>
-            <div class="item-price">IDR 3K Turun Dekat</div>
-          </div>
-          <i data-feather="trash-2" class="remove-item"></i>
-        </div>
-      </div> -->
-      <!-- Daftar Track end -->
     </nav>
     <!-- Navbar end -->
     
@@ -146,16 +120,8 @@
         Silahkan masukkan tujuan anda pada peta jalur angkutan umum yang ada di Berastagi
       </p>
       <div id="mymap" class="mymap"></div>
-      <!-- <div>
-        <input type="text" id="fromInput" placeholder="Dari">
-        <input type="text" id="toInput" placeholder="Ke">
-        <button id="routeButton">Rutekan</button>
-
-      </div> -->
+ 
       
-     
-      
-      <!-- <button id="add-route-button">Tambah Rute</button> -->
       <!-- <div class="container">
                <div class="transportation-box">
           <label for="transportation-select">Pilih Nama Angkutan Umum:</label>
@@ -177,9 +143,7 @@
           />
         </div>
       </div> -->
-    </section>
-    
-
+    </section>  
     <!-- Peta Jalur End -->
 
 
@@ -314,13 +278,6 @@
           <div class="menu-icons">
             <!-- <a href="#"><i data-feather="truck"></i></a> -->
             <a href="#" class="item-detail-button"><i data-feather="chevrons-down"></i></a>
-            <!-- <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
-<lord-icon
-    src="https://cdn.lordicon.com/pqxdilfs.json"
-    trigger="hover"
-    colors="outline:#131432,primary:#e8308c,secondary:#08a88a,tertiary:#ebe6ef"
-    style="width:100px;height:100px">
-</lord-icon> -->
           </div>
           <img src="img/jt/KT.jpg" alt="Angkot Karya Transport" class="menu-card-img" />
           <h3 class="menu-card-title">-Karya Transport-</h3>
@@ -336,7 +293,6 @@
 
         <div class="menu-card">
           <div class="menu-icons">
-            <!-- <a href="#"><i data-feather="truck"></i></a> -->
             <a href="#" class="item-detail-button-kama"><i data-feather="chevrons-down"></i></a>
           </div>
           <img src="img/jt/kama.jpg" alt="Angkot Kama" class="menu-card-img" />
@@ -353,7 +309,6 @@
 
         <div class="menu-card">
           <div class="menu-icons">
-            <!-- <a href="#"><i data-feather="truck"></i></a> -->
             <a href="#" class="item-detail-button-bayu"><i data-feather="chevrons-down"></i></a>
           </div>
           <img src="img/jt/bayu.jpg" alt="Angkot Bayu" class="menu-card-img" />
@@ -370,7 +325,6 @@
 
         <div class="menu-card">
           <div class="menu-icons">
-            <!-- <a href="#"><i data-feather="truck"></i></a> -->
             <a href="#" class="item-detail-button-sibayak"><i data-feather="chevrons-down"></i></a>
           </div>
           <img src="img/jt/sibayak.jpg" alt="Angkot Sibayak" class="menu-card-img" />
@@ -387,7 +341,6 @@
 
         <div class="menu-card">
           <div class="menu-icons">
-            <!-- <a href="#"><i data-feather="truck"></i></a> -->
             <a href="#" class="item-detail-button-rio"><i data-feather="chevrons-down"></i></a>
           </div>
           <img src="img/jt/rio.jpg" alt="Angkot Rio" class="menu-card-img" />
@@ -404,7 +357,6 @@
 
         <div class="menu-card">
           <div class="menu-icons">
-            <!-- <a href="#"><i data-feather="truck"></i></a> -->
             <a href="#" class="item-detail-button-takasima"><i data-feather="chevrons-down"></i></a>
           </div>
           <img src="img/jt/takasima.jpg" alt="Angkot Takasima" class="menu-card-img" />
@@ -421,7 +373,6 @@
         
         <div class="menu-card">
           <div class="menu-icons">
-            <!-- <a href="#"><i data-feather="truck"></i></a> -->
             <a href="#" class="item-detail-button-sigantang"><i data-feather="chevrons-down"></i></a>
           </div>
           <img src="img/jt/sigantang.jpg" alt="Angkot Sigantang Sira" class="menu-card-img" />
@@ -441,41 +392,7 @@
     <!-- MEnu Card End -->
     <!-- Menu Section End -->
 
-    <!-- Contact Section Start -->
-    <!-- <section id="contact" class="contact">
-      <h2><span>Kontak</span> Saya</h2>
-      <p>
-        Silahkan kontak saya jika ada pertanyaan atau saran
-      </p> -->
-
-      <!-- <div class="row">
-        <iframe
-          src="https://goo.gl/maps/kcWv9t6XPPWynfeF7"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          class="map"
-        ></iframe> -->
-
-        <!-- <form action="">
-          <div class="input-group">
-            <i data-feather="user"></i>
-            <input type="text" placeholder="nama" />
-          </div>
-          <div class="input-group">
-            <i data-feather="mail"></i>
-            <input type="text" placeholder="email" />
-          </div>
-          <div class="input-group">
-            <i data-feather="phone"></i>
-            <input type="text" placeholder="no hp" />
-          </div>
-          <button type="submit" class="btn">kirim pesan</button>
-        </form>
-      </div>
-    </section> -->
-    <!-- Contact Section End -->
-
+   
     <!-- Footer Start-->
     <footer>
       <div class="socials">
@@ -522,8 +439,8 @@
               <i data-feather="star" class="star-full"></i>
               <i data-feather="star" class="star-full"></i>
               <i data-feather="star"></i>
+              <p class="star-text">(Bintang Berdasarkan Kenyamanan Armada)</p>
             </div>
-            <!-- <a href="#"><i data-feather="truck"></i> <span>add to list</span></a> -->
           </div>
         </div>
       </div>
@@ -550,8 +467,8 @@
               <i data-feather="star" class="star-full"></i>
               <i data-feather="star" class="star-full"></i>
               <i data-feather="star"></i>
+              <p class="star-text">(Bintang Berdasarkan Kenyamanan Armada)</p>
             </div>
-            <!-- <a href="#"><i data-feather="truck"></i> <span>add to list</span></a> -->
           </div>
         </div>
       </div>
@@ -576,8 +493,8 @@
               <i data-feather="star" class="star-full"></i>
               <i data-feather="star"></i>
               <i data-feather="star"></i>
+              <p class="star-text">(Bintang Berdasarkan Kenyamanan Armada)</p>
             </div>
-            <!-- <a href="#"><i data-feather="truck"></i> <span>add to list</span></a> -->
           </div>
         </div>
       </div>
@@ -602,8 +519,8 @@
               <i data-feather="star" class="star-full"></i>
               <i data-feather="star"></i>
               <i data-feather="star"></i>
+              <p class="star-text">(Bintang Berdasarkan Kenyamanan Armada)</p>
             </div>
-            <!-- <a href="#"><i data-feather="truck"></i> <span>add to list</span></a> -->
           </div>
         </div>
       </div>
@@ -627,8 +544,8 @@
               <i data-feather="star" class="star-full"></i>
               <i data-feather="star"></i>
               <i data-feather="star"></i>
+              <p class="star-text">(Bintang Berdasarkan Kenyamanan Armada)</p>
             </div>
-            <!-- <a href="#"><i data-feather="truck"></i> <span>add to list</span></a> -->
           </div>
         </div>
       </div>
@@ -653,8 +570,8 @@
               <i data-feather="star" class="star-full"></i>
               <i data-feather="star"></i>
               <i data-feather="star"></i>
+              <p class="star-text">(Bintang Berdasarkan Kenyamanan Armada)</p>
             </div>
-            <!-- <a href="#"><i data-feather="truck"></i> <span>add to list</span></a> -->
           </div>
         </div>
       </div>
@@ -679,8 +596,8 @@
               <i data-feather="star" class="star-full"></i>
               <i data-feather="star" class="star-full"></i>
               <i data-feather="star"></i>
+              <p class="star-text">(Bintang Berdasarkan Kenyamanan Armada)</p>
             </div>
-            <!-- <a href="#"><i data-feather="truck"></i> <span>add to list</span></a> -->
           </div>
         </div>
       </div>
@@ -695,9 +612,6 @@
     <!-- My Javascript -->
     <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
     <script src="js/script.js"></script>
-    <!-- My PHP -->
-    <!-- <php src="php/koneksi.php"></php> -->
-    <!-- <a href="https://lordicon.com/">Icons by Lordicon.com</a> -->
 
   </body>
 </html>

@@ -150,56 +150,6 @@ body .navbar .navbar-logo {
   color: var(--primary);
 }
 
-/* Daftar Track
-.truck {
-  position: absolute;
-  top: 100%;
-  right: -100%;
-  height: 100vh;
-  width: 35rem;
-  padding: 0 1.5rem;
-  background-color: #fff;
-  color: var(--backg);
-  transition: 0.3s;
-}
-
-.truck.active {
-  right: 0;
-}
-
-.truck .truck-item {
-  margin: 2rem 0;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px dashed #666;
-  position: relative;
-}
-
-.truck img {
-  height: 6rem;
-  border-radius: 50%;
-}
-
-.truck h3 {
-  font-size: 1.6rem;
-  padding-bottom: 0.5rem;
-}
-
-.truck .item-price {
-  font-size: 1.3rem;
-}
-
-.truck .remove-item {
-  position: absolute;
-  right: 1rem;
-  cursor: pointer;
-}
-
-.truck .remove-item:hover {
-  color: var(--primary);
-} */
 /* Hero Section */
 .hero {
   min-height: 100vh;
@@ -540,51 +490,6 @@ body .navbar .navbar-logo {
   background-color: 0 1px 3px rgba(0, 0, 0, 0.5);
   border: 1px solid var(--belakang);
 }
-/* Contact Section */
-.contact .row {
-  display: flex;
-  margin-top: 2rem;
-  background-color: #222;
-}
-
-.contact .row .map {
-  flex: 1 1 45rem;
-  width: 100%;
-  object-fit: cover;
-}
-
-.contact .row form {
-  flex: 1 1 45rem;
-  padding: 5rem 2rem;
-  text-align: center;
-}
-
-.contact .row form .input-group {
-  display: flex;
-  align-items: center;
-  margin-top: 2rem;
-  background-color: var(--backg);
-  border: 1px solid #eee;
-  padding-left: 2rem;
-}
-
-.contact .row form .input-group input {
-  width: 100%;
-  padding: 2rem;
-  font-size: 1.7rem;
-  background: none;
-  color: #fff;
-}
-
-.contact .row form .btn {
-  margin-top: 3rem;
-  display: inline-block;
-  padding: 1rem 3rem;
-  font-size: 1.7rem;
-  color: #fff;
-  background-color: var(--primary);
-  cursor: pointer;
-}
 
 /* Footer Section */
 footer {
@@ -843,10 +748,18 @@ footer .credit p {
 
 .modal-content .menu-stars {
   height: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .modal-content .menu-stars .star-full {
   fill: #000000;
+}
+
+.modal-content .menu-stars .star-text {
+  margin-left: 5px;
+  height: 2.8rem;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content a {
@@ -891,14 +804,23 @@ footer .credit p {
   font-size: 1.2rem;
   line-height: 1.8rem;
   margin-top: 1.2rem;
+  text-align: justify;
 }
 
 .modal-content-kama .menu-stars {
-  height: 5rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .modal-content-kama .menu-stars .star-full {
   fill: #000000;
+}
+
+.modal-content-kama .menu-stars .star-text {
+  margin-left: 5px;
+  height: 2.8rem;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content-kama a {
@@ -943,14 +865,23 @@ footer .credit p {
   font-size: 1.2rem;
   line-height: 1.8rem;
   margin-top: 1.2rem;
+  text-align: justify;
 }
 
 .modal-content-bayu .menu-stars {
-  height: 5rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .modal-content-bayu .menu-stars .star-full {
   fill: #000000;
+}
+
+.modal-content-bayu .menu-stars .star-text {
+  margin-left: 5px;
+  height: 2.8rem;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content-bayu a {
@@ -994,14 +925,23 @@ footer .credit p {
   font-size: 1.2rem;
   line-height: 1.8rem;
   margin-top: 1.2rem;
+  text-align: justify;
 }
 
 .modal-content-sibayak .menu-stars {
-  height: 5rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .modal-content-sibayak .menu-stars .star-full {
   fill: #000000;
+}
+
+.modal-content-sibayak .menu-stars .star-text {
+  margin-left: 5px;
+  height: 2.8rem;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content-sibayak a {
@@ -1045,14 +985,23 @@ footer .credit p {
   font-size: 1.2rem;
   line-height: 1.8rem;
   margin-top: 1.2rem;
+  text-align: justify;
 }
 
 .modal-content-rio .menu-stars {
-  height: 5rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .modal-content-rio .menu-stars .star-full {
   fill: #000000;
+}
+
+.modal-content-rio .menu-stars .star-text {
+  margin-left: 5px;
+  height: 2.8rem;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content-rio a {
@@ -1096,14 +1045,23 @@ footer .credit p {
   font-size: 1.2rem;
   line-height: 1.8rem;
   margin-top: 1.2rem;
+  text-align: justify;
 }
 
 .modal-content-takasima .menu-stars {
-  height: 5rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .modal-content-takasima .menu-stars .star-full {
   fill: #000000;
+}
+
+.modal-content-takasima .menu-stars .star-text {
+  margin-left: 5px;
+  height: 2.8rem;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content-takasima a {
@@ -1147,14 +1105,23 @@ footer .credit p {
   font-size: 1.2rem;
   line-height: 1.8rem;
   margin-top: 1.2rem;
+  text-align: justify;
 }
 
 .modal-content-sigantang .menu-stars {
-  height: 5rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .modal-content-sigantang .menu-stars .star-full {
   fill: #000000;
+}
+
+.modal-content-sigantang .menu-stars .star-text {
+  margin-left: 5px;
+  height: 2.8rem;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content-sigantang a {
@@ -1252,18 +1219,6 @@ footer .credit p {
   .menu p {
     font-size: 1.4rem;
   }
-
-  /* .contact .row {
-    flex-wrap: wrap;
-  }
-
-  .contact .row .map {
-    height: 30rem;
-  }
-
-  .contact .row form {
-    padding-top: 0;
-  } */
 }
 
 /* Mobile Phone */
@@ -1325,5 +1280,40 @@ footer .credit p {
 
   .modal-content-sigantang {
     flex-wrap: wrap;
+  }
+
+  .modal-content .menu-stars .star-text {
+    text-align: left;
+    font-size: 1.2rem;
+  }
+
+  .modal-content-kama .menu-stars .star-text {
+    text-align: left;
+    font-size: 1.2rem;
+  }
+
+  .modal-content-bayu .menu-stars .star-text {
+    text-align: left;
+    font-size: 1.2rem;
+  }
+
+  .modal-content-sibayak .menu-stars .star-text {
+    text-align: left;
+    font-size: 1.2rem;
+  }
+
+  .modal-content-rio .menu-stars .star-text {
+    text-align: left;
+    font-size: 1.2rem;
+  }
+
+  .modal-content-takasima .menu-stars .star-text {
+    text-align: left;
+    font-size: 1.2rem;
+  }
+
+  .modal-content-sigantang .menu-stars .star-text {
+    text-align: left;
+    font-size: 1.2rem;
   }
 }
