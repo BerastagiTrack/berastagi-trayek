@@ -886,7 +886,7 @@ var geocoder = L.Control.geocoder({
       },
       createMarker: function (i, waypoint, n) {
         // Buat marker untuk setiap destinasi dengan warna yang berbeda-beda
-        var colors = ["red", "blue", "green", "yellow", "orange"];
+        var colors = ["red", "blue"];
         var color = colors[i % colors.length];
         return L.marker(waypoint.latLng, {
           draggable: true,
@@ -895,7 +895,7 @@ var geocoder = L.Control.geocoder({
               "https://raw.githubusercontent.com/BerastagiTrack/ikon/main/car-solid-" +
               color +
               ".png",
-            iconSize: [70, 60],
+            iconSize: [80, 60],
             iconAnchor: [32, 41],
           }),
         }).bindPopup("Destinasi #" + (i + 1));
@@ -937,3 +937,46 @@ var hapusRuteButton = L.Control.extend({
 });
 
 mymap.addControl(new hapusRuteButton());
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let slides = document.getElementsByClassName("mySlides");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 7000); // Ganti gambar setiap 5 detik
+}
+
+function plusSlides(n) {
+  slideIndex += n;
+  let slides = document.getElementsByClassName("mySlides");
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  if (slideIndex < 1) {
+    slideIndex = slides.length;
+  }
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex - 1].style.display = "block";
+}
+
+// Tambahkan event listener untuk mengatur visibilitas tombol saat pointer bergerak di dalam gambar
+let slideshowContainer = document.querySelector(".slideshow-container");
+slideshowContainer.addEventListener("mouseenter", function () {
+  document.querySelector(".prev").style.display = "block";
+  document.querySelector(".next").style.display = "block";
+});
+
+slideshowContainer.addEventListener("mouseleave", function () {
+  document.querySelector(".prev").style.display = "none";
+  document.querySelector(".next").style.display = "none";
+});

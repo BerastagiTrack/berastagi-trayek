@@ -346,6 +346,67 @@ body .navbar .navbar-logo {
   color: var(--primary);
 }
 
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+  margin-top: 1.7rem;
+}
+
+.mySlides {
+  display: none;
+  animation: fade 2s ease-in-out infinite;
+}
+
+.img .slide {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Tombol Previous dan Next */
+.prev-next-buttons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.prev,
+.next {
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.prev {
+  margin-left: 20px;
+}
+
+.next {
+  margin-right: 20px;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 7s;
+}
+
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  10%,
+  90% {
+    opacity: 1;
+  }
+}
+
 /* Menu Section */
 .menu h2,
 .contact h2 {
